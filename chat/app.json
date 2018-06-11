@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#B94ED3",
+    "navigationBarTitleText": "智能聊天机器人",
+    "navigationBarTextStyle": "#fff"
+  }
+}

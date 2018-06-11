@@ -1,0 +1,24 @@
+<view class='container'>
+  <scroll-view class='scroll-view' scroll-y="true" scroll-into-view="{{scrolltop}}" enable-back-to-top="true">
+    <view class='chat-list'>
+      <block wx:for="{{msgList}}" wx:key="{{item.key}}">
+        <view class='reply' wx:if="{{item.type==1}}" id="scroll{{index + 1}}">
+          <image class='photo' src='/image/tuling.png'></image>
+          <text class='text'>{{item.msg}}</text>
+        </view>
+
+        <view class='chat' wx:if="{{item.type==0}}" id="roll{{index + 1}}">
+          <text class='text'>{{item.msg}}</text>
+          <image class='photo' src='{{avatarUrl}}'></image>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <form bindsubmit="send" class='sendMsgForm'>
+    <view class='sendMsg'>
+      <input class='inputMsg' name="msg" value='{{searchinput}}'></input>
+      <button type="primary" form-type="submit">发送</button>
+    </view>
+  </form>
+</view>
